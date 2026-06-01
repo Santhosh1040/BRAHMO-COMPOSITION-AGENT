@@ -12,6 +12,7 @@ import ContextModal from "../components/ContextModal";
 import RationaleModal from "../components/RationaleModal";
 
 export default function Home() {
+  const API_URL = process.env.NEXT_PUBLIC_API_URL!;
   const [users, setUsers] = useState<any[]>([]);
   const [patients, setPatients] = useState<any[]>([]);
 
@@ -33,7 +34,7 @@ export default function Home() {
   }, []);
 
   const loadUsers = async () => {
-    const res = await fetch("http://127.0.0.1:8000/users");
+    const res = await fetch(`${API_URL}/users`)
     const data = await res.json();
 
     setUsers(data);
@@ -44,7 +45,7 @@ export default function Home() {
   };
 
   const loadPatients = async () => {
-    const res = await fetch("http://127.0.0.1:8000/patients");
+    const res = await fetch(`${API_URL}/patients`)
     const data = await res.json();
 
     setPatients(data);
@@ -53,27 +54,26 @@ export default function Home() {
       setSelectedPatient(data[0].id);
     }
   };
+const composeContext = async () => {
+  setLoading(true);
 
-  const composeContext = async () => {
-    setLoading(true);
+  try {
+    const res = await fetch(
+      `${API_URL}/compose/${budget}`,
+      {
+        method: "POST",
+      }
+    );
 
-    try {
-      const res = await fetch(
-        `http://127.0.0.1:8000/compose/${budget}`,
-        {
-          method: "POST",
-        }
-      );
+    const data = await res.json();
 
-      const data = await res.json();
-
-      setResult(data);
-    } catch (error) {
-      console.error("Compose failed:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
+    setResult(data);
+  } catch (error) {
+    console.error("Compose failed:", error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <main className="min-h-screen bg-slate-100 text-black p-8">
