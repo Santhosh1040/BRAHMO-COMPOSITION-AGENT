@@ -1,0 +1,42 @@
+"use client";
+
+import CompositionRationale from "./CompositionRationale";
+
+type Props = {
+  open: boolean;
+  onClose: () => void;
+  blocks: any[];
+};
+
+export default function RationaleModal({
+  open,
+  onClose,
+  blocks,
+}: Props) {
+  if (!open) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+      <div className="bg-white w-[90%] max-w-6xl rounded-xl p-6 max-h-[90vh] overflow-y-auto">
+
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-bold">
+            Composition Rationale
+          </h2>
+
+          <button
+            onClick={onClose}
+            className="text-xl cursor-pointer"
+          >
+            ✕
+          </button>
+        </div>
+
+        <CompositionRationale
+          blocks={blocks}
+        />
+
+      </div>
+    </div>
+  );
+}
