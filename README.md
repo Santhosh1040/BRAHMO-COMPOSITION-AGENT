@@ -1,83 +1,162 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Brahmo Composition Agent</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
+<h1 align="center">Brahmo Composition Agent</h1>
 
-        h1, h2, h3 {
-            color: #1e40af;
-        }
-
-        code {
-            background: #f4f4f4;
-            padding: 2px 5px;
-            border-radius: 4px;
-        }
-
-        pre {
-            background: #f4f4f4;
-            padding: 15px;
-            overflow-x: auto;
-            border-radius: 6px;
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-    </style>
-</head>
-<body>
-
-<h1>Brahmo Composition Agent</h1>
-
-<p>
-An AI-driven context composition engine that intelligently selects,
-compresses, prioritizes, and assembles contextual information within a
-limited token budget while preserving critical safety constraints.
+<p align="center">
+An AI-driven Context Composition Engine that intelligently selects, prioritizes, compresses, and assembles contextual information within a constrained token budget while preserving critical safety and policy constraints.
 </p>
 
-<div class="section">
-    <h2>Project Overview</h2>
+---
 
-    <p>
-        Large Language Models have limited context windows.
-        The Brahmo Composition Agent addresses this problem by constructing
-        high-quality contextual prompts from large collections of candidate nodes.
-    </p>
+<h2>Live Demo</h2>
 
-    <p>
-        The system prioritizes important information, compresses low-value
-        content, preserves safety-critical constraints, and produces a
-        final context suitable for LLM consumption.
-    </p>
-</div>
+<p>
+<strong>Frontend:</strong><br>
+<a href="YOUR_VERCEL_URL" target="_blank">
+YOUR_VERCEL_URL
+</a>
+</p>
 
-<div class="section">
-    <h2>Key Features</h2>
+<p>
+<strong>Backend API:</strong><br>
+<a href="https://brahmo-composition-agent-production.up.railway.app" target="_blank">
+https://brahmo-composition-agent-production.up.railway.app
+</a>
+</p>
 
-    <ul>
-        <li>Importance-based candidate ranking</li>
-        <li>Token-aware context assembly</li>
-        <li>Compression pipeline</li>
-        <li>Budget fitting engine</li>
-        <li>Constraint preservation</li>
-        <li>Context block generation</li>
-        <li>Compression timeline visualization</li>
-        <li>Composition rationale viewer</li>
-        <li>Supabase integration</li>
-        <li>Real-time frontend dashboard</li>
-    </ul>
-</div>
+---
 
-<div class="section">
-    <h2>Architecture</h2>
+<h2>Project Overview</h2>
+
+<p>
+Large Language Models operate within limited context windows and token budgets. In real-world systems, especially healthcare environments, contextual information often exceeds what can be provided to the model.
+</p>
+
+<p>
+Brahmo Composition Agent solves this problem by retrieving candidate context nodes, scoring their importance, compressing lower-value content, preserving critical constraints, and assembling a final context optimized for LLM consumption.
+</p>
+
+---
+
+<h2>Features</h2>
+
+<h3>Context Composition Pipeline</h3>
+
+<ul>
+  <li>Candidate node retrieval</li>
+  <li>Importance scoring engine</li>
+  <li>Token counting and estimation</li>
+  <li>Context compression</li>
+  <li>Budget fitting</li>
+  <li>Structured block assembly</li>
+  <li>Final context generation</li>
+</ul>
+
+---
+
+<h3>Token Budget Management</h3>
+
+<ul>
+  <li>Adjustable token budgets</li>
+  <li>Real-time budget breakdown</li>
+  <li>Context budget calculation</li>
+  <li>Token usage visualization</li>
+  <li>Compression tracking</li>
+</ul>
+
+---
+
+<h3>Intelligent Prioritization</h3>
+
+<ul>
+  <li>Retrieval weight scoring</li>
+  <li>Injection weight scoring</li>
+  <li>Distance-based ranking</li>
+  <li>Importance-based selection</li>
+  <li>Priority-driven context inclusion</li>
+</ul>
+
+---
+
+<h3>Constraint Preservation</h3>
+
+<ul>
+  <li>Protection of critical context nodes</li>
+  <li>Safety-first composition strategy</li>
+  <li>Clinical policy preservation</li>
+  <li>Constraint-aware budget fitting</li>
+  <li>Controlled omission of low-value content</li>
+</ul>
+
+---
+
+<h3>Explainability & Transparency</h3>
+
+<ul>
+  <li>Included node tracking</li>
+  <li>Omitted node tracking</li>
+  <li>Compression timeline visualization</li>
+  <li>Composition rationale viewer</li>
+  <li>Final context inspection</li>
+</ul>
+
+---
+
+<h2>Tech Stack</h2>
+
+<h3>Frontend</h3>
+
+<ul>
+  <li>Next.js</li>
+  <li>React</li>
+  <li>TypeScript</li>
+  <li>CSS</li>
+</ul>
+
+---
+
+<h3>Backend</h3>
+
+<ul>
+  <li>FastAPI</li>
+  <li>Python</li>
+</ul>
+
+---
+
+<h3>Database</h3>
+
+<ul>
+  <li>Supabase</li>
+</ul>
+
+---
+
+<h2>Deployment</h2>
+
+<table>
+  <tr>
+    <th>Service</th>
+    <th>Platform</th>
+  </tr>
+
+  <tr>
+    <td>Frontend</td>
+    <td>Vercel</td>
+  </tr>
+
+  <tr>
+    <td>Backend</td>
+    <td>Railway</td>
+  </tr>
+
+  <tr>
+    <td>Database</td>
+    <td>Supabase</td>
+  </tr>
+</table>
+
+---
+
+<h2>System Architecture</h2>
 
 <pre>
 Frontend (Next.js)
@@ -102,98 +181,141 @@ Final Context
 Supabase Database
 </pre>
 
-</div>
+---
 
-<div class="section">
-    <h2>Technology Stack</h2>
+<h2>Project Structure</h2>
 
-    <h3>Frontend</h3>
-    <ul>
-        <li>Next.js</li>
-        <li>React</li>
-        <li>TypeScript</li>
-    </ul>
+<pre>
+BRAHMO-COMPOSITION-AGENT/
+│
+├── backend/
+│   ├── composition/
+│   ├── models/
+│   ├── tests/
+│   ├── composition_pipeline.py
+│   ├── data_loader.py
+│   ├── database.py
+│   ├── main.py
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── src/
+│   │   ├── app/
+│   │   └── components/
+│   ├── public/
+│   └── package.json
+│
+└── README.md
+</pre>
 
-    <h3>Backend</h3>
-    <ul>
-        <li>FastAPI</li>
-        <li>Python</li>
-    </ul>
+---
 
-    <h3>Database</h3>
-    <ul>
-        <li>Supabase</li>
-    </ul>
+<h2>Installation & Setup</h2>
 
-    <h3>Deployment</h3>
-    <ul>
-        <li>Railway (Backend)</li>
-        <li>Vercel (Frontend)</li>
-    </ul>
-</div>
+<h3>1️⃣ Clone Repository</h3>
 
-<div class="section">
-    <h2>Composition Pipeline</h2>
+<pre>
+git clone https://github.com/Santhosh1040/BRAHMO-COMPOSITION-AGENT.git
+</pre>
 
-    <ol>
-        <li>Retrieve candidate nodes from Supabase.</li>
-        <li>Calculate importance scores.</li>
-        <li>Estimate token usage.</li>
-        <li>Compress low-value nodes.</li>
-        <li>Remove low-priority content when required.</li>
-        <li>Preserve critical constraints.</li>
-        <li>Assemble context blocks.</li>
-        <li>Generate final context.</li>
-    </ol>
-</div>
+---
 
-<div class="section">
-    <h2>Budget Fitting Strategy</h2>
+<h3>2️⃣ Backend Setup</h3>
 
-    <p>
-        The composition engine prioritizes preservation of
-        high-importance and constraint-protected nodes over
-        strict budget compliance.
-    </p>
+<pre>
+cd backend
+pip install -r requirements.txt
+</pre>
 
-    <p>
-        During context assembly, low-value content is aggressively
-        compressed or omitted. However, critical safety constraints,
-        policy requirements, and high-importance context are protected
-        from removal.
-    </p>
+<h4>Create .env</h4>
 
-    <p>
-        As a result, the final context may occasionally exceed the
-        target token budget when retaining critical information is
-        deemed more important than achieving an exact token threshold.
-    </p>
+<pre>
+TOKEN_BUDGET=4000
+SYSTEM_PROMPT_RESERVE=800
+USER_MESSAGE_RESERVE=200
 
-    <p>
-        This design reflects a practical tradeoff commonly required in
-        real-world healthcare systems, where omission of critical
-        information can be more harmful than a modest increase in token usage.
-    </p>
-</div>
+SUPABASE_URL=your_supabase_url
+SUPABASE_KEY=your_supabase_key
+</pre>
 
-<div class="section">
-    <h2>Deployment URLs</h2>
+<h4>Run Backend</h4>
 
-    <p><strong>Frontend:</strong> [Add your Vercel URL]</p>
-    <p><strong>Backend:</strong> https://brahmo-composition-agent-production.up.railway.app</p>
-</div>
+<pre>
+uvicorn main:app --reload
+</pre>
 
-<div class="section">
-    <h2>Future Improvements</h2>
+---
 
-    <ul>
-        <li>Advanced semantic ranking</li>
-        <li>Dynamic compression policies</li>
-        <li>Multi-user support</li>
-        <li>Audit trail and explainability enhancements</li>
-        <li>LLM integration for adaptive compression</li>
-    </ul>
-</div>
+<h3>3️⃣ Frontend Setup</h3>
 
-</body>
-</html>
+<pre>
+cd frontend
+npm install
+</pre>
+
+<h4>Create .env.local</h4>
+
+<pre>
+NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
+</pre>
+
+<h4>Run Frontend</h4>
+
+<pre>
+npm run dev
+</pre>
+
+---
+
+<h2>Budget Fitting Strategy</h2>
+
+<p>
+The composition engine prioritizes preservation of high-importance and constraint-protected nodes over strict budget compliance.
+</p>
+
+<p>
+During context assembly, low-value content is aggressively compressed or omitted. However, critical safety constraints, policy requirements, and high-importance context are protected from removal.
+</p>
+
+<p>
+As a result, the final context may occasionally exceed the target token budget when retaining critical information is deemed more important than achieving an exact budget threshold.
+</p>
+
+<p>
+This design reflects a practical tradeoff commonly required in real-world healthcare systems where omission of critical context can be more harmful than a modest increase in token consumption.
+</p>
+
+---
+
+<h2>Demo Highlights</h2>
+
+<ul>
+  <li>Context composition workflow</li>
+  <li>Token-aware budget management</li>
+  <li>Context compression engine</li>
+  <li>Importance-based ranking</li>
+  <li>Constraint preservation strategy</li>
+  <li>Compression timeline visualization</li>
+  <li>Composition rationale viewer</li>
+  <li>Full-stack cloud deployment</li>
+</ul>
+
+---
+
+<h2>Future Improvements</h2>
+
+<ul>
+  <li>Semantic embedding-based retrieval</li>
+  <li>Adaptive compression using LLMs</li>
+  <li>Advanced explainability metrics</li>
+  <li>Multi-user workflow support</li>
+  <li>Audit trail and decision logging</li>
+</ul>
+
+---
+
+<h2>Conclusion</h2>
+
+<p>
+Brahmo Composition Agent demonstrates practical AI engineering concepts including context composition, token budget optimization, intelligent prioritization, constraint-aware reasoning, explainable AI workflows, cloud deployment, and full-stack system integration. The project showcases how critical contextual information can be preserved and efficiently delivered to Large Language Models operating under limited context windows.
+</p>
